@@ -2,6 +2,8 @@
 
 A small RAG-based FAQ assistant built for the NextLeap **AI System Design, LLMs & Prompt Engineering** milestone. The selected product context is **INDMoney**; the factual corpus is limited to **HDFC Mutual Fund** public sources.
 
+**Live prototype:** https://schemescopegit-eoavutw2d6adgbv9fhyt5y.streamlit.app/
+
 ## What it does
 
 SchemeScope answers factual questions about five HDFC schemes:
@@ -176,6 +178,20 @@ I can answer public scheme facts, but I can’t accept or process PAN, Aadhaar, 
 The source registry contains only official HDFC Mutual Fund pages. No Groww, broker, blog or other third-party page is used as an answer source.
 
 Source pages include the five selected scheme pages (Direct and Regular plan references) plus HDFC's official KIM, SID, scheme-summary, factsheet and investor-FAQ pages. The assistant only links to URLs present in its own corpus metadata.
+
+## UI improvements / next steps
+
+The current UI is intentionally lightweight and demo-focused. The next UI iteration could improve:
+
+- **Mobile responsiveness:** tighten spacing and card layouts for smaller screens.
+- **Conversation navigation:** add clearer conversation anchors and a more obvious way to jump between recent questions and answers.
+- **Source previews:** show a compact source title/section preview before opening the official page.
+- **Loading states:** provide a clearer progress state while retrieval and first-time index creation are running.
+- **Accessibility:** improve keyboard navigation, focus states, contrast checks and screen-reader labels.
+- **Scheme discovery:** add a simple scheme selector/filter so users can narrow questions to a supported scheme.
+- **Empty/error states:** make unavailable evidence, temporary model failures and unsupported questions more visually distinct.
+
+These are presentation and usability improvements; the facts-only guardrails and source restrictions remain the core product behavior.
 
 ## Known limits
 
